@@ -129,11 +129,11 @@ Command Used: python scratch/inspect_dataset.py
          ┌────────────────────────────▼────────────────────────────┐
          │                    FastAPI Backend                      │
          │   ┌─────────────────────────────────────────────────┐   │
-         │   │ 1. Data Cleaning Engine & Audit Logger          │   │
-         │   │ 2. Deterministic Metric Calculator (pandas)     │   │
-         │   │ 3. Scoring Engine (Configurable Thresholds)     │   │
-         │   │ 4. Anomaly Engine (IQR + Category History)      │   │
-         │   │ 5. AI Recommendation Service + Rule Fallback   │   │
+         │   │          │   │
+         │   │ 1. Deterministic Metric Calculator (pandas)     │   │
+         │   │ 2. Scoring Engine (Configurable Thresholds)     │   │
+         │   │ 3. Anomaly Engine (IQR + Category History)      │   │
+         │   │ 4. AI Recommendation Service + Rule Fallback   │   │
          │   └─────────────────────────────────────────────────┘   │
          └────────────────────────────▲────────────────────────────┘
                                       │
@@ -346,7 +346,7 @@ av-hackathon-group-5/
 ## 10. Build Phases & Verification Gates
 
 ### Phase 1: Database Setup, Data Ingestion & Audit Logging
-- **Deliverables**: SQLite schema creation, raw CSV loading, cleaning pipeline, audit log generation.
+- **Deliverables**: CSV loading.
 - **Verification Gate**: Run pytest to check `cleaning_audit_log` records exact number of expected cleaning actions (1 duplicate row, 3 duplicate txn_ids, 1 typo, 1 missing date format).
 
 ### Phase 2: Deterministic Calculation Engine & Anomaly Detection
