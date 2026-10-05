@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "net_worth": 3687000.0,
+    "total_assets": 7025000.0,
+    "total_liabilities": 3338000.0,
+    "avg_monthly_income": 259000.0,
+    "avg_monthly_expense": 197745.06041666667,
+    "savings_rate_pct": 22.38,
+    "dti_pct": 18.03,
+    "emergency_runway_months": 9.56
+  },
+  "score": {
+    "total": 79.9,
+    "runway_pts": 20.0,
+    "debt_pts": 15.0,
+    "savings_pts": 17.9,
+    "investment_pts": 15.0,
+    "discipline_pts": 12.0
+  },
+  "simulated_score": {
+    "total": 100.0,
+    "runway_pts": 20.0,
+    "debt_pts": 25.0,
+    "savings_pts": 20.0,
+    "investment_pts": 15.0,
+    "discipline_pts": 20.0
+  },
+  "monthly_cashflow": [
+    {
+      "month": "2024-10",
+      "income": 223000.0,
+      "expense": 173384.3,
+      "net_savings": 49615.70000000001,
+      "savings_rate": 22.249192825112114
+    },
+    {
+      "month": "2024-11",
+      "income": 227000.0,
+      "expense": 183607.31,
+      "net_savings": 43392.69,
+      "savings_rate": 19.115722466960353
+    },
+    {
+      "month": "2024-12",
+      "income": 231000.0,
+      "expense": 216411.95,
+      "net_savings": 14588.049999999988,
+      "savings_rate": 6.315173160173155
+    },
+    {
+      "month": "2025-01",
+      "income": 235000.0,
+      "expense": 190379.19,
+      "net_savings": 44620.81,
+      "savings_rate": 18.987578723404255
+    },
+    {
+      "month": "2025-02",
+      "income": 229000.0,
+      "expense": 184362.04,
+      "net_savings": 44637.95999999999,
+      "savings_rate": 19.492558951965062
+    },
+    {
+      "month": "2025-03",
+      "income": 323000.0,
+      "expense": 175842.69,
+      "net_savings": 147157.31,
+      "savings_rate": 45.5595386996904
+    },
+    {
+      "month": "2025-04",
+      "income": 237000.0,
+      "expense": 222776.23,
+      "net_savings": 14223.76999999999,
+      "savings_rate": 6.001590717299574
+    },
+    {
+      "month": "2025-05",
+      "income": 241000.0,
+      "expense": 177591.69,
+      "net_savings": 63408.31,
+      "savings_rate": 26.310502074688795
+    },
+    {
+      "month": "2025-06",
+      "income": 235000.0,
+      "expense": 180674.73,
+      "net_savings": 54325.26999999999,
+      "savings_rate": 23.117136170212763
+    },
+    {
+      "month": "2025-07",
+      "income": 239000.0,
+      "expense": 204525.8,
+      "net_savings": 34474.20000000001,
+      "savings_rate": 14.424351464435151
+    },
+    {
+      "month": "2025-08",
+      "income": 243000.0,
+      "expense": 189859.08,
+      "net_savings": 53140.92000000001,
+      "savings_rate": 21.868691358024698
+    },
+    {
+      "month": "2025-09",
+      "income": 337000.0,
+      "expense": 175785.73,
+      "net_savings": 161214.27,
+      "savings_rate": 47.83806231454006
+    },
+    {
+      "month": "2025-10",
+      "income": 241000.0,
+      "expense": 180407.02,
+      "net_savings": 60592.98000000001,
+      "savings_rate": 25.142315352697096
+    },
+    {
+      "month": "2025-11",
+      "income": 245000.0,
+      "expense": 186510.21,
+      "net_savings": 58489.79000000001,
+      "savings_rate": 23.87338367346939
+    },
+    {
+      "month": "2025-12",
+      "income": 249000.0,
+      "expense": 219702.66,
+      "net_savings": 29297.339999999997,
+      "savings_rate": 11.765999999999998
+    },
+    {
+      "month": "2026-01",
+      "income": 253000.0,
+      "expense": 197778.59,
+      "net_savings": 55221.41,
+      "savings_rate": 21.826644268774707
+    },
+    {
+      "month": "2026-02",
+      "income": 247000.0,
+      "expense": 180942.46,
+      "net_savings": 66057.54000000001,
+      "savings_rate": 26.74394331983806
+    },
+    {
+      "month": "2026-03",
+      "income": 341000.0,
+      "expense": 192066.36,
+      "net_savings": 148933.64,
+      "savings_rate": 43.67555425219942
+    },
+    {
+      "month": "2026-04",
+      "income": 255000.0,
+      "expense": 236811.47,
+      "net_savings": 18188.53,
+      "savings_rate": 7.132756862745097
+    },
+    {
+      "month": "2026-05",
+      "income": 259000.0,
+      "expense": 198173.4,
+      "net_savings": 60826.600000000006,
+      "savings_rate": 23.48517374517375
+    },
+    {
+      "month": "2026-06",
+      "income": 253000.0,
+      "expense": 202854.6,
+      "net_savings": 50145.399999999994,
+      "savings_rate": 19.820316205533594
+    },
+    {
+      "month": "2026-07",
+      "income": 257000.0,
+      "expense": 239206.97,
+      "net_savings": 17793.03,
+      "savings_rate": 6.923357976653696
+    },
+    {
+      "month": "2026-08",
+      "income": 261000.0,
+      "expense": 213386.61000000002,
+      "net_savings": 47613.389999999985,
+      "savings_rate": 18.242678160919535
+    },
+    {
+      "month": "2026-09",
+      "income": 355000.0,
+      "expense": 222840.36000000002,
+      "net_savings": 132159.63999999998,
+      "savings_rate": 37.2280676056338
+    }
+  ],
+  "category_breakdown": {
+    "Debt Payment": 1119605.71,
+    "Education": 103066.97,
+    "Entertainment": 166947.87,
+    "Food": 593827.97,
+    "Healthcare": 105074.48,
+    "Housing": 768000.0,
+    "Insurance": 132000.0,
+    "Investments": 760000.0,
+    "Other": 118079.64,
+    "Personal Care": 45208.07,
+    "Salary": 0.0,
+    "Shopping": 317183.68,
+    "Transport": 194572.92,
+    "Travel": 183614.14,
+    "Utilities": 138700.0
+  }
+}
