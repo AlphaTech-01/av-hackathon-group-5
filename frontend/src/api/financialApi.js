@@ -41,6 +41,56 @@ export const fetchAIRecommendations = async (useFallbackMode = false) => {
   }
 };
 
+export const fetchHealthScore = async (adjustOutliers = false) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/health-score?adjust_outliers=${adjustOutliers}`);
+    if (!response.ok) throw new Error('Failed to fetch health score');
+    return await response.json();
+  } catch (err) {
+    return RAW_DASHBOARD_DATA.score;
+  }
+};
+
+export const fetchAnomalies = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/anomalies`);
+    if (!response.ok) throw new Error('Failed to fetch anomalies');
+    return await response.json();
+  } catch (err) {
+    return RAW_DASHBOARD_DATA.anomalies;
+  }
+};
+
+export const fetchDataQuality = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/data-quality`);
+    if (!response.ok) throw new Error('Failed to fetch data quality');
+    return await response.json();
+  } catch (err) {
+    return {
+      data_quality_score: 99.81,
+      audit_observations: RAW_DASHBOARD_DATA.data_quality_logs
+    };
+  }
+};
+
+export const uploadDatasetFiles = async (txnsFile, assetsFile = null, liabilitiesFile = null) => {
+  const formData = new FormData();
+  formData.append('transactions_file', txnsFile);
+  if (assetsFile) formData.append('assets_file', assetsFile);
+  if (liabilitiesFile) formData.append('liabilities_file', liabilitiesFile);
+
+  const response = await fetch(`${API_BASE_URL}/upload`, {
+    method: 'POST',
+    body: formData
+  });
+
+  if (!response.ok) {
+    throw new Error(`Upload failed with status ${response.status}`);
+  }
+  return await response.json();
+};
+
 export const getFallbackRecommendations = () => [
   {
     priority: 1,
