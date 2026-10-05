@@ -8,6 +8,7 @@ import { CategoryDonutChart } from './components/CategoryDonutChart';
 import { AnomaliesBanner } from './components/AnomaliesBanner';
 import { RecommendationsPanel } from './components/RecommendationsPanel';
 import { AuditLogModal } from './components/AuditLogModal';
+import { UploadDatasetModal } from './components/UploadDatasetModal';
 import { TransactionsTable } from './components/TransactionsTable';
 
 import { fetchDashboardData } from './api/financialApi';
@@ -19,12 +20,17 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('overview');
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
 
-  useEffect(() => {
+  const loadData = () => {
     fetchDashboardData().then(({ data, isLive }) => {
       setController(new FinancialController(data));
       setIsLiveBackend(isLive);
     });
+  };
+
+  useEffect(() => {
+    loadData();
   }, []);
 
   if (!controller) {
@@ -53,6 +59,7 @@ export default function App() {
       {/* Navbar */}
       <Header
         onOpenAuditModal={() => setIsAuditModalOpen(true)}
+        onOpenUploadModal={() => setIsUploadModalOpen(true)}
         isLiveBackend={isLiveBackend}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -184,6 +191,13 @@ export default function App() {
         isOpen={isAuditModalOpen}
         onClose={() => setIsAuditModalOpen(false)}
         auditData={auditInfo}
+      />
+
+      {/* CSV Dataset Upload Modal */}
+      <UploadDatasetModal
+        isOpen={isUploadModalOpen}
+        onClose={() => setIsUploadModalOpen(false)}
+        onUploadSuccess={() => loadData()}
       />
 
     </div>

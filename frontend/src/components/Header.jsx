@@ -1,7 +1,7 @@
 import React from 'react';
 import { Activity, ShieldCheck, Database, Sparkles, SlidersHorizontal } from 'lucide-react';
 
-export const Header = ({ onOpenAuditModal, isLiveBackend, activeTab, setActiveTab }) => {
+export const Header = ({ onOpenAuditModal, onOpenUploadModal, isLiveBackend, activeTab, setActiveTab }) => {
   return (
     <header className="sticky top-0 z-40 bg-[#060911]/90 backdrop-blur-xl border-b border-slate-800/80 px-4 lg:px-8 py-3.5 transition-all">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -59,7 +59,17 @@ export const Header = ({ onOpenAuditModal, isLiveBackend, activeTab, setActiveTa
         </div>
 
         {/* Data Quality & System Status */}
-        <div className="flex items-center gap-3 w-full md:w-auto justify-end">
+        <div className="flex items-center gap-3 w-full md:w-auto justify-end flex-wrap">
+          
+          {/* Upload CSV Button */}
+          <button
+            onClick={onOpenUploadModal}
+            className="flex items-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/40 px-3.5 py-1.5 rounded-xl transition-all text-xs font-semibold cursor-pointer shadow-sm hover:border-indigo-400"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
+            <span>Upload CSV</span>
+          </button>
+
           {/* Data Quality Score Pill */}
           <button
             onClick={onOpenAuditModal}
